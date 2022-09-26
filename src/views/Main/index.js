@@ -1,20 +1,10 @@
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Card from '../../components/Card'
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
       <Card/>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  }
-});

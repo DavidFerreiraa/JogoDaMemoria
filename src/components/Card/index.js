@@ -33,17 +33,21 @@ export default function Card() {
               ></View>
             </TouchableOpacity>
           ))}
-          <StatusBar style="auto" />
         </View>
     );
-
-    const styles = StyleSheet.create({
-        card: {
-          height: 50,
-          width: 40,
-          borderRadius: 4,
-          margin: 4,
-        },
-      });
-
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  card: {
+    height: 50,
+    width: 40,
+    borderRadius: 4,
+    margin: 4,
+  },
+});
