@@ -13,6 +13,12 @@ export default function Card() {
       { status: 0, color: "#16A085", key: 4},
       { status: 0, color: "#3498DB", key: 5},
       { status: 0, color: "#8E44AD", key: 6},
+      { status: 0, color: "#FE2E2E", key: 7},
+      { status: 0, color: "#00FF00", key: 8},
+      { status: 0, color: "#9A2EFE", key: 9},
+      { status: 0, color: "#FE9A2E", key: 10},
+      { status: 0, color: "#00FF00", key: 11},
+      { status: 0, color: "#9A2EFE", key: 12},
     ]);
 
   const openCard = (card, index) => {
@@ -66,7 +72,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-  },
+    flexWrap: "wrap"
+    },
   card: {
     height: 50,
     width: 40,
