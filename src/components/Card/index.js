@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 let abertas = []
