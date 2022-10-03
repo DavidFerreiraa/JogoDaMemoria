@@ -1,7 +1,11 @@
+import { View } from 'react-native';
 import CardTable from '../../components/CardTable'
 
 export default function Main() {
   return (
-    <CardTable></CardTable>
+    <View>
+      <CardTable/>
+    </View>
+
   );
 }

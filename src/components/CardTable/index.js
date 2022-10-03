@@ -11,11 +11,13 @@ export default function CardTable() {
 
 const styles = StyleSheet.create({
   container: {
-    width: "12rem",
-    backgroundColor: "rgba(255, 255, 255, 0.25)",
+    width: "16rem",
+    paddingBottom: 40,
+    backgroundColor: "#ddd",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 5
+    borderRadius: 10,
+    shadowRadius: 20,
     }
 });
