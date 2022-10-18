@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
+import Counter from "../Counter";
 
 let abertas = []
 let corretas = []
@@ -8,18 +9,18 @@ export default function Card() {
   let [pontuacao, setPontuacao] = useState(0);
 
   const [board, setBoard] = useState([
-      { status: 0, color: "#3498DB", key: 1},
+      { status: 0, color: "#edf002", key: 9},
+      { status: 0, color: "#8A00AD", key: 6},
+      { status: 0, color: "#0418D6", key: 1},
       { status: 0, color: "#16A085", key: 2},
       { status: 0, color: "#8A00AD", key: 3},
       { status: 0, color: "#16A085", key: 4},
-      { status: 0, color: "#3498DB", key: 5},
-      { status: 0, color: "#8A00AD", key: 6},
-      { status: 0, color: "#FE2E2E", key: 7},
       { status: 0, color: "#00FF00", key: 8},
-      { status: 0, color: "#9A2EFE", key: 9},
+      { status: 0, color: "#edf002", key: 12},
+      { status: 0, color: "#FE2E2E", key: 7},
       { status: 0, color: "#FE2E2E", key: 10},
       { status: 0, color: "#00FF00", key: 11},
-      { status: 0, color: "#9A2EFE", key: 12},
+      { status: 0, color: "#0418D6", key: 5},
     ]);
 
   const openCard = (card, index) => { //Altera o status do item para "aberto - 1"
@@ -58,12 +59,15 @@ export default function Card() {
   }
   return ( //Renderiza os cards na tela
       <View style={styles.container}>
+        {/* Renderiza a pontuação atual do jogador. */}
+        <Counter points={pontuacao}/> 
+
         {board.map((card, index) => (
           <TouchableOpacity key={card.key} onPress={() => openCard(card, index)}>
             <View
               style={[
                 styles.card,
-                { backgroundColor: card.status === 0 ? "#ABB2B9" : card.color },
+                { backgroundColor: card.status === 0 ? "#444" : card.color },
               ]}
             ></View>
           </TouchableOpacity>
@@ -80,10 +84,11 @@ const styles = StyleSheet.create({ //Estilizações dos cards e do container
     justifyContent: "center",
     flexWrap: "wrap"
     },
+
   card: {
     height: 50,
     width: 40,
     borderRadius: 4,
-    margin: 4,
+    margin: 7,
   },
 });
